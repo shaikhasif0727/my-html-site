@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Iqbal Aluminum إقبال المنيوم</title>
+    <meta name="description" content="Professional aluminum and steel fabrication services in Kuwait. Doors, windows, kitchens, shutters, chimneys, and steel work with immediate maintenance.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .services-hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/banner1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 120px 2rem 80px;
+        }
+
+        .services-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .services-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 2rem;
+        }
+
+        .service-detail {
+            background: white;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-header .arabic {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .service-content {
+            padding: 3rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .service-info h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-info li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-info li:before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .service-image {
+            text-align: center;
+        }
+
+        .service-image i {
+            font-size: 8rem;
+            color: #4CAF50;
+            opacity: 0.3;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 2rem;
+            margin-top: 3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #333;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <nav class="nav">
+        <div class="logo">Iqbal Aluminum إقبال المنيوم</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Services Hero -->
+<section class="services-hero">
+    <h1>Our Services خدماتنا</h1>
+    <p>Professional aluminum and steel fabrication services in Kuwait</p>
+</section>
+
+<!-- Services Content -->
+<div class="services-container">
+    <!-- Doors Service -->
+    <div class="service-detail">
+        <div class="service-header">
+            <h2>Doors أبواب</h2>
+            <div class="arabic">أبواب الألمنيوم والصلب المخصصة</div>
+        </div>
+        <div class="service-content">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h3>Custom Door Solutions</h3>
+                    <ul>
+                        <li>Aluminum entrance doors</li>
+                        <li>Steel security doors</li>
+                        <li>Sliding glass doors</li>
+                        <li>French doors</li>
+                        <li>Garage doors</li>
+                        <li>Commercial doors</li>
+                        <li>Custom designs</li>
+                        <li>Professional installation</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <i class="fas fa-door-open"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Windows Service -->
+    <div class="service-detail">
+        <div class="service-header">
+            <h2>Windows شبابيك</h2>
+            <div class="arabic">تركيب النوافذ الحديثة</div>
+        </div>
+        <div class="service-content">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h3>Modern Window Solutions</h3>
+                    <ul>
+                        <li>Aluminum window frames</li>
+                        <li>Double-glazed windows</li>
+                        <li>Sliding windows</li>
+                        <li>Casement windows</li>
+                        <li>Awning windows</li>
+                        <li>Energy-efficient windows</li>
+                        <li>Soundproof windows</li>
+                        <li>Custom window designs</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <i class="fas fa-window-maximize"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kitchen Service -->
+    <div class="service-detail">
+        <div class="service-header">
+            <h2>Kitchen مطبخ</h2>
+            <div class="arabic">تصنيع وتثبيت المطابخ</div>
+        </div>
+        <div class="service-content">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h3>Complete Kitchen Solutions</h3>
+                    <ul>
+                        <li>Aluminum kitchen cabinets</li>
+                        <li>Steel kitchen frames</li>
+                        <li>Kitchen countertops</li>
+                        <li>Kitchen islands</li>
+                        <li>Storage solutions</li>
+                        <li>Modern kitchen designs</li>
+                        <li>Custom kitchen layouts</li>
+                        <li>Professional installation</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <i class="fas fa-utensils"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shutter Service -->
+    <div class="service-detail">
+        <div class="service-header">
+            <h2>Shutter شتر</h2>
+            <div class="arabic">تركيب الشتر الأمني والديكوراتي</div>
+        </div>
+        <div class="service-content">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h3>Security & Decorative Shutters</h3>
+                    <ul>
+                        <li>Roll-down security shutters</li>
+                        <li>Decorative window shutters</li>
+                        <li>Garage door shutters</li>
+                        <li>Commercial shutters</li>
+                        <li>Motorized shutters</li>
+                        <li>Manual shutters</li>
+                        <li>Custom shutter designs</li>
+                        <li>Shutter maintenance</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chimney Service -->
+    <div class="service-detail">
+        <div class="service-header">
+            <h2>Chimney مدخنة</h2>
+            <div class="arabic">تصنيع وتركيب المداخن</div>
+        </div>
+        <div class="service-content">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h3>Professional Chimney Services</h3>
+                    <ul>
+                        <li>Steel chimney fabrication</li>
+                        <li>Aluminum chimney installation</li>
+                        <li>Commercial chimneys</li>
+                        <li>Residential chimneys</li>
+                        <li>Chimney maintenance</li>
+                        <li>Chimney repairs</li>
+                        <li>Custom chimney designs</li>
+                        <li>Safety compliance</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <i class="fas fa-fire"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Steel Service -->
+    <div class="service-detail">
+        <div class="service-header">
+            <h2>Steel استيل</h2>
+            <div class="arabic">تصنيع الصلب المخصص</div>
+        </div>
+        <div class="service-content">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h3>Custom Steel Fabrication</h3>
+                    <ul>
+                        <li>Structural steel work</li>
+                        <li>Steel frames and beams</li>
+                        <li>Steel railings</li>
+                        <li>Steel gates</li>
+                        <li>Steel furniture</li>
+                        <li>Decorative steel elements</li>
+                        <li>Steel welding services</li>
+                        <li>Steel maintenance</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <i class="fas fa-cogs"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<section class="cta-section">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Contact Iqbal Aluminum إقبال المنيوم today for a free quote and immediate service!</p>
+    <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+                        <a href="tel:66656683" class="btn btn-secondary">Call Now: 66656683</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 Iqbal Aluminum إقبال المنيوم. All rights reserved.</p>
+    <p>Professional Aluminum & Steel Fabrication Services in Kuwait</p>
+</footer>
+
+<script>
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(30, 60, 114, 0.95)';
+        } else {
+            header.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+        }
+    });
+</script>
+</body>
+</html>
