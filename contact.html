@@ -63,6 +63,21 @@
             color: #4CAF50;
         }
 
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
         .contact-hero {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/banner2.png');
             background-size: cover;
@@ -206,17 +221,152 @@
         }
 
         @media (max-width: 768px) {
+            .nav {
+                padding: 0 1rem;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(30, 60, 114, 0.95);
+                flex-direction: column;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0;
+                padding: 0.5rem 2rem;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.5rem 0;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .contact-hero {
+                padding: 100px 1rem 60px;
+                background-attachment: scroll;
+            }
+
+            .contact-hero h1 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .contact-hero p {
+                font-size: 1rem;
+            }
+
+            .contact-container {
+                padding: 60px 1rem;
+            }
+
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .contact-hero h1 {
-                font-size: 2rem;
+            .contact-form {
+                padding: 1.5rem;
             }
 
-            .nav-links {
-                display: none;
+            .contact-form h2 {
+                font-size: 1.5rem;
+            }
+
+            .form-group {
+                margin-bottom: 1rem;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+
+            .contact-info {
+                padding: 1.5rem;
+            }
+
+            .contact-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-item {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .contact-item h3 {
+                font-size: 1.3rem;
+            }
+
+            .contact-item p {
+                font-size: 0.95rem;
+            }
+
+            .btn-submit {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                width: 100%;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact-hero p {
+                font-size: 0.9rem;
+            }
+
+            .contact-form {
+                padding: 1rem;
+            }
+
+            .contact-info {
+                padding: 1rem;
+            }
+
+            .contact-item {
+                padding: 0.8rem;
+            }
+
+            .contact-item h3 {
+                font-size: 1.2rem;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .btn-submit {
+                padding: 8px 16px;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -226,8 +376,13 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">Iqbal Aluminum إقبال المنيوم</div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
